@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegir stickers</title>
+    <script src="https://kit.fontawesome.com/4e2ed3971d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" />
+</head>
+<body>
+   <div class="text">
+    <h1>Elige hasta un máximo de 10 stickers!!</h1>
+   </div>
+    <div class="row">
+        <div class="col">
+          <div class="card">
+            <img src="./assets/img/cozy.jpg" class="card-img-top" alt="Cozy">
+            <div class="card-body">
+              <h5 class="card-title">Sticker Disco Cozy</h5>
+            </div>
+            <input id="sticker1" value="" type="number" class="form-control" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="./assets/img/for-you.png" class="card-img-top" alt="for-you">
+            <div class="card-body">
+              <h5 class="card-title">Sticker Disco For You</h5>
+            </div>
+            <input id="sticker2" value="" type="number" class="form-control" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="./assets/img/spacy.jpg" class="card-img-top" alt="Spacy">
+            <div class="card-body">
+              <h5 class="card-title">Sticker Disco Spacy</h5>
+            </div>
+            <input id="sticker3" value="" type="number" class="form-control" />
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <button type="button" class="btn" id="verificar"
+          onclick="
+            let sticker1 = Number(document.querySelector('#sticker1').value);
+            let sticker2 = Number(document.querySelector('#sticker2').value);
+            let sticker3 = Number(document.querySelector('#sticker3').value);
+
+            let suma = sticker1 + sticker2 + sticker3;
+
+            if (suma <= 10){
+             mensaje.innerHTML = '¡Has añadido ' + suma + ' stickers!';
+             mensaje.style.color = '#1a1a1a'; /* Negro */
+            } else {
+              mensaje.innerHTML = '¡Te has excedido en la cantidad de stickers!';
+              mensaje.style.color = '#ff0000'; /* Rojo */
+            }">
+          Verificar
+        </button>
+        <p id="mensaje"></p>
+      </div>
+      <div class="links">
+        <a href="./index.html" id="prev"> <i class="fa-solid fa-arrow-left"></i> Anterior &nbsp</a>
+        <a href="./index3.html" id="next"> Siguiente <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    <script src="./assets/js/js2.js"></script>
+</body>
+</html>
