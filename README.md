@@ -1,1 +1,1 @@
-Deploy: https://joserojasc.github.io/Desafio_condiciones/
+Deploy: https://joserojasc.github.io/js-no-yamashita/
